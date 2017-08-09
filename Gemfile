@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'simplecov', :require => false
   gem 'pry'
   gem 'rspec-rails'
 end
