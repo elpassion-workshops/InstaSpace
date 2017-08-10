@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+
+.content {
+  margin: 40px 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.landing-image {
+  width: 320px;
+  height: 320px;
+}
+
+.landing-buttons-group {
+  padding: 10px;
+}
+
+.facebook-logo {
+  padding: 5px;
+  width: 8%;
+  height: 8%;
+}
+
+.landing-button {
+  margin: 5px;
+  width: 165px;
+}
