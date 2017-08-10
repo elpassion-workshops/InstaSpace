@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'dashboard#index'
+  devise_for :users
+  resources :pictures
+  get '/latest' => 'pictures#latest'
 end
 

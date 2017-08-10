@@ -12,3 +12,7 @@
     div You can use your Facebook account.
     a href='users/sign_up'
       img.facebook-logo src='http://www.workmobileforms.com/wp-content/uploads/2015/04/Facebook-logo-2.png'
+
+    - if current_user
+        = link_to new_picture_path, class: 'button btn btn-danger btn-lg landing-button' do
+          |Add photo!
