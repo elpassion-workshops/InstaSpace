@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title
+      | InstaSpace
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        = content_tag :div, msg, class: "alert alert-#{name == 'notice' ? 'success' : 'danger' } "
+    = yield

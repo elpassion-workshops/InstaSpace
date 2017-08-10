@@ -5,9 +5,8 @@ describe User do
 
   describe 'validations' do
     it 'does not create new User without email address' do
-      new_user = User.new(first_name: 'John', last_name: 'Doe')
-
-      expect(new_user.errors.messages).to eq ({ email: ["can't be blank"] })
+      new_user = User.create(first_name: 'John', last_name: 'Doe')
+      expect(new_user.errors[:email]).to eq ["can't be blank"]
     end
   end
 
