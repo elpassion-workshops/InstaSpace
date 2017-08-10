@@ -1,0 +1,17 @@
+.div.picture-container
+  .div
+    .div
+      .div.pull-left
+        = image_tag @picture.user.avatar.url, :size => '60x60', class: 'user-avatar'
+        .user-name.large = @picture.user.first_name
+      .div.pull-right.picture-date
+        'added at
+        = @picture.created_at.to_date
+    = image_tag @picture.file.url, :size => '400x400'
+    .div
+      div.like-numbers 41 likes
+      img.heart.large.pull-right src='https://maxcdn.icons8.com/Share/icon/win10/Gaming//hearts1600.png'
+    .div.comments-area
+      = "#{@picture.user.first_name}: #{@picture.description}"
+      - @picture.comments.each do |comment|
+        div comment
