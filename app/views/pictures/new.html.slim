@@ -1,6 +1,8 @@
 .div.container
   .div.devise-content
     .div.devise-form
+      img.small src='http://i.imgur.com/gskNjT7.png'
+      h2 Add new photo!
       = form_for @picture, url: pictures_path do |f|
         .field
           .field-label = f.label :file
@@ -9,4 +11,4 @@
           .field-label = f.label :description
           .field-input = f.text_field :description, class: 'form-control'
         .actions.devise-button
-          = f.submit 'Upload!', class: 'btn btn-default'
+          = f.submit 'Upload picture!', class: 'btn btn-default'

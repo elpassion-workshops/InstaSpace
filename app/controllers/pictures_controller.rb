@@ -19,7 +19,7 @@ class PicturesController < ApplicationController
     if @picture.save
       redirect_to latest_path, notice: 'Photo successfully uploaded.'
     else
-      render :action => 'new', flash: 'Validation errors.'
+      render :action => 'new'
     end
   end
 
