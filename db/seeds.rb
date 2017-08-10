@@ -2,7 +2,8 @@ Picture.destroy_all
 User.destroy_all
 
   user = User.create!(first_name: 'Jon', email: 'admin@admin.com',
-                    password: 'secretsecret', password_confirmation: 'secretsecret')
+                    password: 'secretsecret', password_confirmation: 'secretsecret',
+                    avatar: File.new("#{Rails.root}/app/assets/images/jon_snow.jpg"))
 
 
 20.times do

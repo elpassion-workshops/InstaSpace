@@ -1,0 +1,31 @@
+.picture-container {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-picture {
+  padding: 20px;
+  float: left;
+}
+
+img.heart {
+  height: 18px;
+  width: 18px;
+  padding-bottom: 2px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.user-name {
+  float: right;
+  padding: 4px;
+}
+
+.picture-stats {
+  padding: 4px;
+}

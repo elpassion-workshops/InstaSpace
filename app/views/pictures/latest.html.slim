@@ -1,3 +1,12 @@
-
-- @pictures.each do |picture|
-  = image_tag picture.file.url, :size => '100x100'
+.div.picture-container
+  - @pictures.each do |picture|
+    .div.single-picture
+      .div
+        .div.pull-left
+          = image_tag picture.user.avatar.url, :size => '30x30', class: 'user-avatar'
+          .user-name = picture.user.first_name
+        .div.pull-right.picture-stats
+          |41
+          img.heart src='https://maxcdn.icons8.com/Share/icon/win10/Gaming//hearts1600.png'
+      = link_to picture do
+        = image_tag picture.file.url, :size => '300x300'
