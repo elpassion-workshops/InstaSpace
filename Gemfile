@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
+
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'pry'
