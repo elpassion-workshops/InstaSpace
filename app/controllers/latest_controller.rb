@@ -1,0 +1,2 @@
+class LatestController < ApplicationController
+end
