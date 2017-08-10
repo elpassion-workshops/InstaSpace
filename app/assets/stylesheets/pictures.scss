@@ -1,0 +1,58 @@
+.picture-container {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-picture {
+  padding: 20px;
+  float: left;
+}
+
+img.heart {
+  height: 18px;
+  width: 18px;
+  padding-bottom: 2px;
+}
+
+img.heart.large {
+  height: 30px;
+  width: 30px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.user-name {
+  float: right;
+  padding: 4px;
+}
+
+.user-name.large {
+  font-size: 20px;
+  padding: 15px 5px;
+}
+
+.picture-stats {
+  padding: 4px;
+}
+
+.picture-date {
+  font-size: 12px;
+  padding: 22px 5px;
+  font-style: italic;
+}
+
+.like-numbers {
+ float: left;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.comments-area {
+  margin-top: 30px;
+  float: left;
+}

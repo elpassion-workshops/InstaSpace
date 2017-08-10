@@ -1,11 +1,15 @@
-h2
-  | Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+.div.container
+  .div.devise-content
+    .div.devise-form
+      img.small src='http://i.imgur.com/gskNjT7.png'
+      h2 InstaSpace
+      h6 Forgot your password?
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = devise_error_messages!
+        .field
+          .field-label = f.label :email
+          .field-input = f.email_field :email, autofocus: true, class: 'form-control'
+        .actions.devise-button
+          = f.submit 'Send me reset password instructions', class: 'btn btn-default'
+      = render 'devise/shared/links'
+      = link_to 'Go back to main page', root_path
