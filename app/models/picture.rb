@@ -5,4 +5,5 @@ class Picture < ApplicationRecord
                                     :content_type => %w(image/jpg image/jpeg image/png image/gif)
 
   belongs_to :user
+  has_many :comments
 end
