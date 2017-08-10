@@ -1,7 +1,7 @@
 # InstaSpace
 
-<p>**Step 1:** pull the repository</p>
-<p>**Step 2:** run `bundle install`</p>
-<p>**Step 3:** run `rake db:seed`</p>
-<p>**Step 4:** run `rails s`</p>
+**Step 1:** pull the repository</br>
+**Step 2:** run `bundle install`</br>
+**Step 3:** run `rake db:seed`</br>
+**Step 4:** run `rails s`
  
