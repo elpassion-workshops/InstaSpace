@@ -11,11 +11,11 @@ describe User do
   end
 
   describe 'followed users' do
-    xit 'should have a followers method' do
+    it 'should have a followers method' do
       expect(user).to respond_to(:followers)
     end
 
-    xit 'should have a followees method' do
+    it 'should have a followees method' do
       expect(user).to respond_to(:followees)
     end
   end
