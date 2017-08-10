@@ -1,17 +1,18 @@
-.container
-  .centered
-    h2
-      | Log in
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      = devise_error_messages!
-      .field
-        = f.label :email
-        br
-        = f.email_field :email, autofocus: true, class: 'form-control'
-      .field
-        = f.label :password
-        br
-        = f.password_field :password, autocomplete: "off", class: 'form-control'
-      .actions
-        = f.submit "Log in", class: 'btn btn-default'
-    = render "devise/shared/links"
+.div.container
+  .div.devise-content
+    .div.devise-form
+      img.small src='http://i.imgur.com/gskNjT7.png'
+      h2 InstaSpace
+      h6 Log in and get an access to photos taken by your friends - comment, like, explore!
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          .field-label = f.label :email
+          .field-input = f.email_field :email, autofocus: true, class: 'form-control'
+        .field
+          .field-label = f.label :password
+          .field-input = f.password_field :password, autocomplete: 'off', class: 'form-control'
+        .actions.devise-button
+          = f.submit 'Sign in', class: 'btn btn-default'
+      = render 'devise/shared/links'
+      = link_to 'Go back to main page', root_path
