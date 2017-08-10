@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   has_many :pictures
+  has_many :comments
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
