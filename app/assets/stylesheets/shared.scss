@@ -1,3 +1,6 @@
+.alert {
+  margin-bottom: 2px;
+}
 .container {
   position: relative;
 }
@@ -9,4 +12,27 @@ img.small {
 
 body {
   margin: auto;
+}
+
+.current-user-data {
+  font-size: 16px;
+  margin: 10px 20px 0px 0px;
+}
+
+.navbar-buttons {
+  float: left;
+}
+
+.nav-btn {
+  margin: 6px;
+}
+
+.navbar-links {
+  margin: 15px;
+}
+
+.navbar-link {
+  font-size: 16px;
+  float: left;
+  margin: 8px;
 }

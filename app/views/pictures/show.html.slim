@@ -1,4 +1,4 @@
-.div.picture-container
+.div.single-picture-container
   .div
     .div
       .div.pull-left
@@ -15,3 +15,4 @@
       = "#{@picture.user.first_name}: #{@picture.description}"
       - @picture.comments.each do |comment|
         div comment
+    .div.text-center = link_to 'Go back', latest_path, class: 'button btn btn-default nav-btn'
