@@ -10,3 +10,6 @@
           img.heart src='https://maxcdn.icons8.com/Share/icon/win10/Gaming//hearts1600.png'
       = link_to picture do
         = image_tag picture.file.url, :size => '300x300'
+
+.div.text-align:center
+  = will_paginate @pictures, renderer: BootstrapPagination::Rails

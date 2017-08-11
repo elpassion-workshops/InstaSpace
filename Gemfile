@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 #devise for authentication
 gem 'devise'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'simplecov', :require => false
