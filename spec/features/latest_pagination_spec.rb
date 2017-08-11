@@ -22,6 +22,10 @@ describe 'Landing page' do
     it 'should have load more button' do
       expect(page).to have_selector(:link_or_button, 'Load more')
     end
+    it 'load more button should load 4 new pictures' do
+      click_button 'Load more'
+      expect(page).to have_selector(:css, 'div.single-picture', count: 12)
+    end
   end
 
   context 'User visits latest page with 6 pictures' do
