@@ -42,6 +42,10 @@ gem 'devise'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 
+group :test do
+  gem 'database_cleaner'
+end
+
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'pry'

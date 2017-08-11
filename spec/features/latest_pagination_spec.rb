@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'database_cleaner'
 
 describe 'Landing page' do
 
