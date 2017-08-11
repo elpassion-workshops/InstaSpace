@@ -1,4 +1,5 @@
-= will_paginate @pictures
+.pagination
+  = will_paginate @pictures, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer
 .div.picture-container
   - @pictures.each do |picture|
     .div.single-picture
@@ -11,3 +12,5 @@
           img.heart src='https://maxcdn.icons8.com/Share/icon/win10/Gaming//hearts1600.png'
       = link_to picture do
         = image_tag picture.file.url, :size => '300x300'
+.pagination
+  = will_paginate @pictures, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer
