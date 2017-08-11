@@ -12,10 +12,9 @@ describe 'Latest pagination' do
       end
     end
 
-    scenario 'user can see 2 pictures and pagination' do
+    scenario 'user can see 2 pictures' do
       visit latest_path
       expect(page).to have_selector('div.single-picture', count: 2)
-      expect(page).to have_selector('div.pagination', count: 1)
     end
   end
 
@@ -27,10 +26,15 @@ describe 'Latest pagination' do
       end
     end
 
-    scenario 'user can see 8 pictures and pagination' do
+    scenario 'user can see 8 pictures' do
       visit latest_path
       expect(page).to have_selector('div.single-picture', count: 8)
-      expect(page).to have_selector('div.pagination', count: 1)
+    end
+
+    scenario 'user clicks next page' do
+      visit latest_path
+      click_link_or_button 'Next'
+      expect(page).to have_selector('div.single-picture', count: 2)
     end
   end
 end
