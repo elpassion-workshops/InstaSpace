@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 #devise for authentication
 gem 'devise'
 
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'pry'
