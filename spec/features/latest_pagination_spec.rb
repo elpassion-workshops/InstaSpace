@@ -16,11 +16,11 @@ describe 'Landing page' do
       end
       visit latest_path 
     end
-    it 'should have pagination section' do
-      expect(page).to have_selector(:css, '.pagination')
-    end
     it 'should have 8 images' do
       expect(page).to have_selector(:css, 'div.single-picture', count: 8)
+    end
+    it 'should have load more button' do
+      expect(page).to have_selector(:link_or_button, 'Load more')
     end
   end
 
@@ -34,9 +34,6 @@ describe 'Landing page' do
     end
     it 'should have 6 images' do
       expect(page).to have_selector(:css, 'div.single-picture', count: 6)
-    end
-    it 'should not have pagination' do
-      expect(page).not_to have_selector(:css, '.pagination')
     end
   end
 end

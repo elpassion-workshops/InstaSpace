@@ -10,4 +10,5 @@
           img.heart src='https://maxcdn.icons8.com/Share/icon/win10/Gaming//hearts1600.png'
       = link_to picture do
         = image_tag picture.file.url, :size => '300x300'
-  = will_paginate(@pictures, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)
+  /= will_paginate(@pictures, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)
+  button.btn.btn-primary Load more
