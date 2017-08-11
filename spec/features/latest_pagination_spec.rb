@@ -10,7 +10,7 @@ describe 'Landing page' do
 
   context 'User visits latest page with 3 pages' do
     before do
-      20.times do
+      12.times do
       Picture.create(file: File.new("#{Rails.root}/app/assets/images/picture#{rand(1..5)}.jpeg"),
                  description: 'Fancy description', user: @user)
       end
@@ -26,6 +26,10 @@ describe 'Landing page' do
       click_button 'Load more'
       expect(page).to have_selector(:css, 'div.single-picture', count: 12)
     end
+    it 'should not have button when all images are present' do
+      click_button 'Load more'
+      expect(page).not_to have_selector(:link_or_button, 'Load more')
+    end
   end
 
   context 'User visits latest page with 6 pictures' do
@@ -35,9 +39,6 @@ describe 'Landing page' do
                  description: 'Fancy description', user: @user)
       end
       visit latest_path 
-    end
-    it 'should have 6 images' do
-      expect(page).to have_selector(:css, 'div.single-picture', count: 6)
     end
     it 'should not have load more button' do
       expect(page).not_to have_selector(:link_or_button, 'Load more')
