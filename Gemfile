@@ -38,6 +38,10 @@ gem 'jbuilder', '~> 2.5'
 #devise for authentication
 gem 'devise'
 
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
+
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'pry'
