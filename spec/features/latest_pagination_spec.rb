@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'database_cleaner'
 
 describe 'Landing page' do
 
@@ -35,6 +34,9 @@ describe 'Landing page' do
     end
     it 'should have 6 images' do
       expect(page).to have_selector(:css, 'div.single-picture', count: 6)
+    end
+    it 'should not have pagination' do
+      expect(page).not_to have_selector(:css, '.pagination')
     end
   end
 end
