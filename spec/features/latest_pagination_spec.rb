@@ -35,5 +35,8 @@ describe 'Landing page' do
     it 'should have 6 images' do
       expect(page).to have_selector(:css, 'div.single-picture', count: 6)
     end
+    it 'should not have load more button' do
+      expect(page).not_to have_selector(:link_or_button, 'Load more')
+    end
   end
 end

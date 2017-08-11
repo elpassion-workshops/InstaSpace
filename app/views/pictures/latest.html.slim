@@ -11,4 +11,6 @@
       = link_to picture do
         = image_tag picture.file.url, :size => '300x300'
   /= will_paginate(@pictures, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)
-  button.btn.btn-primary Load more
+- if @pictures.next_page
+  div.text-align:center
+    button.btn.btn-primary Load more
