@@ -12,9 +12,14 @@ describe 'latest' do
     end
   end
 
-  scenario 'visits latest page' do
+  scenario 'loads more pictures' do 
     visit latest_path
-    expect(page).to have_selector(:css, '.pagination')
     expect(page).to have_selector('div.single-picture', count: 8)
+    expect(page).to have_selector(:link_or_button, 'Load more')
+
+    click_button 'Load more'
+
+    expect(page).to have_selector('div.single-picture', count: 16)
+
   end
 end
