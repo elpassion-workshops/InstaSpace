@@ -2,7 +2,7 @@ class PicturesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update]
 
   def latest
-    @pictures = Picture.all.order(created_at: :desc)
+    @pictures = Picture.paginate(:page => params[:page], :per_page => 8)
   end
 
   def show
